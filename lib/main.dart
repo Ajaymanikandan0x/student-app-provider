@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            appBarTheme: const AppBarTheme(color: Colors.teal),
+            appBarTheme:
+                const AppBarTheme(color: Color.fromARGB(255, 0, 128, 128)),
             textTheme: GoogleFonts.openSansTextTheme(),
           ),
           routes: {

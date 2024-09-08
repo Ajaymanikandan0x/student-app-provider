@@ -15,10 +15,10 @@ class StudentProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(17, 63, 103, 1),
+        centerTitle: true,
         title: const Text(
           'STUDENT PROFILE',
-          style: TextStyle(color: Colors.white),
+          style: title,
         ),
       ),
       body: Container(
@@ -27,8 +27,8 @@ class StudentProfile extends StatelessWidget {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 74, 133, 172),
-              Color.fromARGB(255, 54, 66, 131)
+              Color.fromARGB(255, 0, 128, 128),
+              Color.fromARGB(255, 212, 212, 212)
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -85,7 +85,7 @@ class StudentProfile extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    "Phone: ${student.studentId}",
+                    "StudentId: ${student.studentId}",
                     style: styleDetails(),
                   ),
                   gapHeight,

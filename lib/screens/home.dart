@@ -23,14 +23,6 @@ class Home extends StatelessWidget {
           style: title,
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.grid_on,
-                color: Colors.white,
-              ))
-        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(30),
           child: Padding(
@@ -61,7 +53,7 @@ class Home extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index) {
                   final students = homeProvider.filteredStudent[index];
                   return Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -142,6 +134,7 @@ class Home extends StatelessWidget {
             MaterialPageRoute(builder: (context) => AddStudent()),
           ).then((value) => homeProvider.refreshStudentList());
         },
+        backgroundColor: const Color.fromARGB(255, 0, 128, 128),
         child: const Icon(Icons.add),
       ),
     );

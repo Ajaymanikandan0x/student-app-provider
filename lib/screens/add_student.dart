@@ -133,6 +133,7 @@ class AddStudent extends StatelessWidget {
                     ),
                     gapHeight,
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         elevatedButton(
                             icon: Icons.save,

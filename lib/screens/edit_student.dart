@@ -21,7 +21,8 @@ class EditStudent extends StatelessWidget {
   final DatabaseHelper databaseHelper = DatabaseHelper();
   @override
   Widget build(BuildContext context) {
-    final editStudent = Provider.of<EditStudentProvider>(context, listen: false);
+    final editStudent =
+        Provider.of<EditStudentProvider>(context, listen: false);
 
     nameController.text = student.name ?? '';
     ageController.text = student.age.toString();
@@ -116,7 +117,7 @@ class EditStudent extends StatelessWidget {
                     ],
                   ),
                   gapHeight,
-                  formField( // Remove Expanded widget
+                  formField(
                     hint: 'id',
                     icon: const Icon(Icons.numbers),
                     keyboardTypeUser: TextInputType.number,
@@ -133,10 +134,11 @@ class EditStudent extends StatelessWidget {
                   ),
                   gapHeight,
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       elevatedButton(
-                          icon: Icons.delete,
-                          text: 'Delete',
+                          icon: Icons.save_alt,
+                          text: 'Save',
                           onPressed: () {
                             saveStudent(context);
                           }),
@@ -167,7 +169,8 @@ class EditStudent extends StatelessWidget {
       final age = int.parse(ageController.text);
       final batch = batchController.text;
       final studentId = int.parse(studentIdController.text);
-      final editStudent = Provider.of<EditStudentProvider>(context, listen: false);
+      final editStudent =
+          Provider.of<EditStudentProvider>(context, listen: false);
 
       final updateStudent = Model(
         id: student.id,

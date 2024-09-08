@@ -8,6 +8,7 @@ class StudentListProvider extends ChangeNotifier {
   List<Model> student = [];
   List<Model> filteredStudent = [];
   bool isSearching = false;
+  
   StudentListProvider() {
     databaseHelper = DatabaseHelper();
     refreshStudentList();
@@ -15,6 +16,7 @@ class StudentListProvider extends ChangeNotifier {
   Future<void> refreshStudentList() async {
     final studentList = await databaseHelper.getStudents();
     student = studentList;
+    filteredStudent = List.from(student); // Initialize filteredStudent
     notifyListeners();
   }
 

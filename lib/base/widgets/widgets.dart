@@ -34,7 +34,7 @@ Widget elevatedButton(
   return ElevatedButton.icon(
     onPressed: onPressed,
     style: ElevatedButton.styleFrom(
-      minimumSize: const Size(150, 50),
+      minimumSize: const Size(180, 60),
       backgroundColor: Colors.teal[800],
     ),
     icon: Icon(icon, color: Colors.black),
